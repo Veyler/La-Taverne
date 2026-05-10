@@ -10,12 +10,23 @@ const io = require("socket.io")(http, {
 })
 const cors = require("cors")
 const PORT = process.env.PORT || 3000;
+const path = require("path")
 
 app.use(cors({
-    origin: "http://127.0.0.1:5500" // Middlewares de protection qui autorise 
-}))                                 // uniquement les requetes du frontend 
+    origin: ["https://la-taverne.onrender.com", "http://127.0.0.1:5500"] // Middlewares de protection qui autorise 
+}))                                                                      // uniquement les requetes du frontend 
 
 app.use(express.json()) // Indispensable pour req.body
+
+app.use(express.static(path.join(__dirname, '../client')))
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/pages/index.html'))
+})
+
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/pages/login.html'))
+})
 
 app.post("/login", async (req, res) => {
     const data = req.body // Récupere le contenu de la requete 
