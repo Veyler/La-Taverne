@@ -1,5 +1,5 @@
 if (!localStorage.getItem("authToken") && !window.location.href.includes("login.html")) {
-    window.location.href = "http://127.0.0.1:5500/client/pages/login.html"
+    window.location.href = "/pages/login.html"
 }
 const token = localStorage.getItem("authToken")
 
@@ -15,11 +15,11 @@ function connexion_clicked(x){
     })
     .then(response => {
         localStorage.setItem("authToken", response.data.token)
-        window.location.href="http://127.0.0.1:5500/client/pages/index.html"
+        window.location.href = "/pages/index.html"  // ✅ corrigé
     })
     .catch(error => {
         if (error.response && error.response.status === 401){
-            alert("Identifiants incorect")
+            alert("Identifiants incorrect")
         }
         console.log("Erreur :", error)
     })
