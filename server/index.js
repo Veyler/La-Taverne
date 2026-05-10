@@ -18,15 +18,6 @@ app.use(cors({
 
 app.use(express.json()) // Indispensable pour req.body
 
-app.use(express.static(path.join(__dirname, '../client')))
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/pages/index.html'))
-})
-
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/pages/login.html'))
-})
 
 app.post("/login", async (req, res) => {
     const data = req.body // Récupere le contenu de la requete 
