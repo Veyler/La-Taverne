@@ -1,5 +1,5 @@
 const token = localStorage.getItem("authToken")
-const socket = io("ws://localhost:8000", {
+const socket = io("https://la-taverne-cjm6.onrender.com", {
     auth : { token : token}
 })
 
