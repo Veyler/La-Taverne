@@ -9,6 +9,7 @@ const io = require("socket.io")(http, {
     cors: { origin: "*"} // Autorise toute les requetes
 })
 const cors = require("cors")
+const PORT = process.env.PORT || 3000;
 
 app.use(cors({
     origin: "http://127.0.0.1:5500" // Middlewares de protection qui autorise 
@@ -73,4 +74,4 @@ io.on("connection", (socket) => {
     })
 })
 
-http.listen(8000, () => console.log("listening on http://localhost:8000"))
+http.listen(PORT, () => console.log("listening on http://localhost:8000"))
