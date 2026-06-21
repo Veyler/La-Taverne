@@ -15,7 +15,7 @@ function connexion_clicked(x){
     })
     .then(response => {
         localStorage.setItem("authToken", response.data.token)
-        window.location.href = "/pages/index.html"  // ✅ corrigé
+        window.location.href = "/pages/index.html"  
     })
     .catch(error => {
         if (error.response && error.response.status === 401){
