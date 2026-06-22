@@ -74,7 +74,7 @@ cd client_app
 npm start
 ```
 
-## 🔨 Build
+## Build
 
 ### Build du client Electron
 ```bash
@@ -134,9 +134,8 @@ la_taverne/
 - `npm run build` : Build pour toutes les plateformes
 - `npm run build:win` : Build pour Windows (NSIS + Portable)
 
----
 
-<h2 align="center">Fait avec ❤️ par Veyler</h1>
+<h3 align="center">Fait avec ❤️ par Veyler</h3>
 
 
 
