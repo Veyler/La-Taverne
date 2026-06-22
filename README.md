@@ -2,20 +2,20 @@
 
 Application collaborative multi-plateforme pour partager et discuter en temps réel.
 
-## 🎯 Description
+## Description
 
 La Taverne est une application composée de trois parties :
 - **Serveur** : Backend Node.js avec Express, Firebase et Socket.io pour la communication en temps réel
 - **Client Web** : Application web pour accéder à La Taverne via navigateur
 - **Client Desktop** : Application Electron pour une expérience native sur Windows, macOS et Linux
 
-## 📋 Prérequis
+## Prérequis
 
 - Node.js (v14 ou supérieur)
 - npm ou yarn
 - Firebase (credentials configurées via `serviceAccountKey.json`)
 
-## 🚀 Installation
+## Installation
 
 ### 1. Cloner le dépôt
 ```bash
@@ -41,7 +41,7 @@ cd ../client_app
 npm install
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Serveur
 Créez un fichier `.env` dans le dossier `server/` :
@@ -53,7 +53,7 @@ JWT_SECRET=<votre-secret>
 
 Assurez-vous que `serviceAccountKey.json` est présent dans le dossier `server/`.
 
-## 🏃 Démarrage
+## Démarrage
 
 ### Démarrer le serveur
 ```bash
@@ -82,8 +82,9 @@ cd client_app
 npm run build:win     # Pour Windows
 npm run build         # Pour toutes les plateformes
 ```
+Vous pouvez également installer l'installateur dans la dernière release.
 
-## 📁 Structure du projet
+## Structure du projet
 
 ```
 la_taverne/
@@ -110,7 +111,7 @@ la_taverne/
 └── README.md
 ```
 
-## 🔌 Technologies utilisées
+## Technologies utilisées
 
 ### Backend
 - **Express** : Framework web Node.js
@@ -123,7 +124,7 @@ la_taverne/
 - **Electron** : Framework pour application desktop
 - **HTML5/CSS3/JavaScript** : Technologies web standard
 
-## 📝 Scripts disponibles
+## Scripts disponibles
 
 ### Serveur
 - `npm start` : Démarre le serveur
@@ -133,6 +134,9 @@ la_taverne/
 - `npm run build` : Build pour toutes les plateformes
 - `npm run build:win` : Build pour Windows (NSIS + Portable)
 
-<p style="text-align: center;">Fait avec ❤️ par Veyler</p>   
+
+
+<h2 align="center">## Fait avec ❤️ par Veyler</h1>
+
 
 
